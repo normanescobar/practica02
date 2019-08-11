@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;/*SIN ACABADO*/
+    font-size: 16px; /*cambiar el tamano de las letras*/
+    background: #4a465b; /*se le pone un fondo color oscuro*/
+}
+
+.contenedor{
+    width: 90%;
+    margin: 20px auto; /*margen de 20px arriba abajo y a los lados auto*/
+    max-width: 1000px; /*limitar la anchura a mil px*/
+    overflow: hidden; /*ocultar lo que esta encima de este contenedor*/
+}
+
+header{
+    background: #fff;
+}
+
+header nav{
+    width: 100%; /*nav ocupa todo el espacio disponibe */
+
+}
+
+header nav ul{
+    list-style: none;
+    overflow: hidden; /*devuleve el color blanco poneindolo al frente*/
+}
+
+header nav ul li{
+    float: left;
+}
+header nav ul li a{
+    text-decoration: none; /*le quita la subraya de enlace*/
+    display: inline-block; /*para que podamos mover las anclas*/
+    color: #000; /*o podemos usar black*/
+    padding: 15px 20px;
+}
+header nav ul li a:hover{ /*seudo elemento*/
+    background: black;
+    color: #fff;
+}
+
+.main{
+    width: 70%;
+    float: left;
+    background: #fff;
+
+}
+.main .imagen {
+    width: 100%;
+}
+.main .imagen img{
+    width: 100%;
+    vertical-align: top;
+}
+.main   .post{
+    padding: 40px;
+}
+
+.main   .post article h2{
+    margin-bottom: 20px;
+    color: #424242;
+}
+.main .post article p{
+    margin-bottom: 15px;
+    line-height: 27px;
+}
+aside{
+    width: 30%;
+    float: left;
+    background: #161f26;
+    padding: 20px;
+    color: white;
+}
+aside .widget{
+    margin-bottom: 20px;
+}
+aside .widget .titulo{
+    color: #ff8000;
+    border-bottom: 1px #ff8000 solid;
+    margin-bottom: 10px ;
+}
+aside .widget ul{
+    list-style: none; /*quita los bullets*/
+}
+aside .widget ul li{
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 10px  0;
+}
+aside .widget ul li a{
+    color: white;
+    text-decoration: none;
+}
+aside .widget ul li a:hover{
+    color: #8f8f8f;
+}
+aside .widget p{
+    line-height: 27px;
+}
+
+footer{
+    width: 70%;
+    text-align: center;
+    background: black;
+    color: #fff;
+    padding: 15px 0;
+    overflow: hidden;
+}
+/*esta porcion de codigo sirve para establecer el responsive
+y variar como se mira dependiendo de los pixeles*/
+@media screen and (max-width: 800px) {
+    .main   {
+        width: 100%;
+
+    }
+    aside{
+        width: 100%;
+    }
+    footer{
+        width: 100%;
+    }
+}
